@@ -38,7 +38,7 @@ if (command === "movie-this") {
 
       console.log(chalk.blue("Title: " + JSON.parse(data).Title));
       console.log(chalk.green("Year Released: " + JSON.parse(data).Year));
-      console.log(chalk.redBright("IMDB Rating: " + JSON.parse(data).imdbRating));
+      console.log(chalk.cyan("IMDB Rating: " + JSON.parse(data).imdbRating));
 
       var rottenTomatoesExists = false;
       var index;
@@ -54,7 +54,7 @@ if (command === "movie-this") {
       if (rottenTomatoesExists) {
         console.log(chalk.magenta('Rotten Tomatoes rating: ' + ratings[index].Value));
       } else {
-        console.log(chalk.magenta('Rotten Tomatoes rating not found'));
+        console.log(chalk.redBright('Rotten Tomatoes rating not found'));
       }
 
       console.log(chalk.cyanBright("Country Produced: " + JSON.parse(data).Country));
@@ -112,16 +112,16 @@ else if (command === "spotify-this-song") {
       return console.log('Error occurred: ' + err);
 
     }
-    console.log(chalk.bgRed.whiteBright("***************************************************************"));
+    console.log(chalk.bgGreenBright.whiteBright("***************************************************************"));
     console.log("");
 
-    console.log("Artist: " + data.tracks.items[0].artists[0].name);
-    console.log("Song Name: " + data.tracks.items[0].name);
-    console.log("Preview Link: " + data.tracks.items[0].preview_url);
-    console.log("Album: " + data.tracks.items[0].album.name);
+    console.log(chalk.blueBright("Artist: " + data.tracks.items[0].artists[0].name));
+    console.log(chalk.yellowBright("Song Name: " + data.tracks.items[0].name));
+    console.log(chalk.redBright("Preview Link: " + data.tracks.items[0].preview_url));
+    console.log(chalk.magentaBright("Album: " + data.tracks.items[0].album.name));
 
     console.log("");
-    console.log(chalk.bgRed.whiteBright("***************************************************************"));
+    console.log(chalk.bgGreenBright.whiteBright("***************************************************************"));
   });
 }
 // 8888888888888888888888
@@ -247,10 +247,6 @@ else if (command === "do-what-it-says") {
 
 
 
-
-// pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-// oooooooooooooooooo0000000000000000000000000000000000000000ppppppppppp
-// kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 
 
 
