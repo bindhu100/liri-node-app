@@ -21,16 +21,13 @@ var fs = require("fs");
 
 var command = process.argv[2];
 
-// movie
-if (command === "movie-this") {
+function movieThis(movieTitle){
+  if (movieTitle === undefined) {
 
-  var movie = process.argv[3];
-  if (movie === undefined) {
-
-    movie = "Mr. Nobody";
+    movieTitle = "Mr. Nobody";
   }
 
-  request("https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy", function (error, response, data) {
+  request("https://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=trilogy", function (error, response, data) {
     if (!error && response.statusCode === 200) {
       console.log(data);
       console.log(chalk.bgCyan.whiteBright("***************************************************************"));
@@ -65,22 +62,12 @@ if (command === "movie-this") {
       console.log("");
       console.log(chalk.bgCyan.whiteBright("***************************************************************"));
     }
-
-
-
   });
+};
 
-
-}
-
-// **********************
-// concert
-// node liri.js concert-this <artist/band name here>
-// brand names :Alice in Chains, Alexisonfire , Animals as Leaders, Alice Cooper, 
-else if (command === "concert-this") {
-
-  var artist = process.argv[3];
-  request("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp", function (error, response, data) {
+// concert-this
+function concertThis(nameArtist){
+  request("https://rest.bandsintown.com/artists/" + nameArtist + "/events?app_id=codingbootcamp", function (error, response, data) {
     if (!error && response.statusCode === 200) {
 
       console.log(chalk.bgRed.whiteBright("***************************************************************"));
@@ -96,14 +83,8 @@ else if (command === "concert-this") {
 
   });
 }
-// *****************
-// song
-// node liri.js spotify-this-song '<song name here>'
-// songs name: This Time for Africa, All Of Me, Happy, Sorry, Love Yourself
 
-else if (command === "spotify-this-song") {
-  var song = process.argv[3];
-
+function songThis(song){
   if (song === undefined) {
     song = "The Sign";
   }
@@ -124,6 +105,34 @@ else if (command === "spotify-this-song") {
     console.log(chalk.bgGreenBright.whiteBright("***************************************************************"));
   });
 }
+
+// movie
+if (command === "movie-this") {
+
+  var movie = process.argv[3];
+  movieThis(movie);
+
+  }
+
+// **********************
+// concert
+// node liri.js concert-this <artist/band name here>
+// brand names :Alice in Chains, Alexisonfire , Animals as Leaders, Alice Cooper, 
+else if (command === "concert-this") {
+
+  var artist = process.argv[3];
+  concertThis(artist);
+}
+// *****************
+// song
+// node liri.js spotify-this-song '<song name here>'
+// songs name: This Time for Africa, All Of Me, Happy, Sorry, Love Yourself
+
+else if (command === "spotify-this-song") {
+  var song = process.argv[3];
+
+  songThis(song);
+}
 // 8888888888888888888888
 // 88888888888888888888888
 // ************************
@@ -139,7 +148,7 @@ else if (command === "do-what-it-says") {
     }
 
     console.log(data);
-    var dataArr = data.split(",");
+    var dataArr = data.split(", ");
     console.log(dataArr);
 
     command = dataArr[0];
@@ -147,69 +156,16 @@ else if (command === "do-what-it-says") {
 
     if (command === "concert-this") {
       var artist = doWhatItSays;
-
-      request("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp", function (error, response, data) {
-        if (!error && response.statusCode === 200) {
-
-          console.log(chalk.bgRed.whiteBright("***************************************************************"));
-          console.log("");
-
-          console.log(chalk.yellow("Venue: " + JSON.parse(data)[0].venue.name));
-          console.log(chalk.green("Location: " + JSON.parse(data)[0].venue.city + " " + JSON.parse(data)[0].venue.region));
-          console.log(chalk.blue("Date: " + moment(JSON.parse(data)[0].datetime).format("MM/DD/YYYY")));
-
-          console.log("");
-          console.log(chalk.bgRed.whiteBright("***************************************************************"));
-        }
-
-      });
+      concertThis(artist);
+   
     }else if (command === "movie-this") {
       var movie = doWhatItSays;
-
-      if (movie === undefined) {
-
-        movie = "Mr. Nobody";
-      }
-      request("https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy", function (error, response, data) {
-        if (!error && response.statusCode === 200) {
-          console.log(data);
-          console.log(chalk.bgCyan.whiteBright("***************************************************************"));
-          console.log("");
-
-          console.log(chalk.blue("Title: " + JSON.parse(data).Title));
-          console.log(chalk.green("Year Released: " + JSON.parse(data).Year));
-          console.log(chalk.redBright("IMDB Rating: " + JSON.parse(data).imdbRating));
-
-          var rottenTomatoesExists = false;
-          var index;
-          var ratings = JSON.parse(data).Ratings;
-          for (var i = 0; i < ratings.length; i++) {
-            if (ratings[i].Source === 'Rotten Tomatoes') {
-              rottenTomatoesExists = true;
-              index = i;
-              break;
-            }
-          }
-
-          if (rottenTomatoesExists) {
-            console.log(chalk.magenta('Rotten Tomatoes rating: ' + ratings[index].Value));
-          } else {
-            console.log(chalk.magenta('Rotten Tomatoes rating not found'));
-          }
-
-          console.log(chalk.cyanBright("Country Produced: " + JSON.parse(data).Country));
-          console.log(chalk.yellow("Language: " + JSON.parse(data).Language));
-          console.log(chalk.blueBright("Plot: " + JSON.parse(data).Plot));
-          console.log(chalk.greenBright("Actors: " + JSON.parse(data).Actors));
-
-          console.log("");
-          console.log(chalk.bgCyan.whiteBright("***************************************************************"));
-        }
-      });
+      movieThis(movie);
 
     }else if (command === "spotify-this-song") {
     
       var song = doWhatItSays;
+      songThis(song);
 
       if (song === undefined) {
         song = "The Sign";
@@ -243,7 +199,7 @@ else if (command === "do-what-it-says") {
 // node liri.js spotify-this-song '<song name here>'
   // songs name: This Time for Africa, All Of Me, Happy, Sorry, Love Yourself
 // node liri.js movie-this '<movie name here>'
-// node liri.js do-what-it-says 
+// c 
 
 
 
