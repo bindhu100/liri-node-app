@@ -199,9 +199,10 @@ else if (command === "do-what-it-says") {
 // node liri.js spotify-this-song '<song name here>'
   // songs name: This Time for Africa, All Of Me, Happy, Sorry, Love Yourself
 // node liri.js movie-this '<movie name here>'
-// c 
+// node liri.js do-what-it-says 
+// movie-this, spider man
 
-
+// spotify-this-song,"I Want it That Way"
 
 
 
