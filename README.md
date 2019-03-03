@@ -28,14 +28,9 @@ If user will search the Bands in Town Artist Events API for an artist and render
 <li>Venue location</li>
 <li>Date of the Event</li>
 </ul>
+
+
 ![GitHub Logo](image/movie.jpg)
-
-
-
-
-
-
-
 
 
 
