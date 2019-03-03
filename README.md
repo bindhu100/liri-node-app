@@ -20,6 +20,8 @@ If user will search the movie the following information display in your terminal
 <li>Actors in the movie</li>
 </ul>
 
+![GitHub Logo](image/movie.jpg)
+
 <h3>Function for Concert:tv:</h3>
 If user will search the Bands in Town Artist Events API for an artist and render the following information about each event to the terminal:
 
@@ -30,7 +32,7 @@ If user will search the Bands in Town Artist Events API for an artist and render
 </ul>
 
 
-![GitHub Logo](image/movie.jpg)
+
 
 
 ![GitHub Logo](image/Screenshot_1.jpg)
