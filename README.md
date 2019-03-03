@@ -6,6 +6,20 @@ Link to video of Application in Action
 
 https://drive.google.com/file/d/1LdKEju-_oRYpAtqRKpJiMW9rcM5NwDCQ/view?usp=sharing
 
+
+<h3>:film_strip:Movie Function</h3>
+If user will search the movie the following information display in your terminal/bash window
+<ul>
+<li>Title of the movie</li>
+<li>Year the movie came out</li>
+<li>IMDB Rating of the movie</li>
+<li>Rotten Tomatoes Rating of the movie</li>
+<li>Country where the movie was produced</li>
+<li>Language of the movie</li>
+<li>Plot of the movie</li>
+<li>Actors in the movie</li>
+</ul>
+
 <h3>Function for Concert:tv:</h3>
 If user will search the Bands in Town Artist Events API for an artist and render the following information about each event to the terminal:
 
@@ -14,6 +28,7 @@ If user will search the Bands in Town Artist Events API for an artist and render
 <li>Venue location</li>
 <li>Date of the Event</li>
 </ul>
+![GitHub Logo](image/movie)
 
 
 
