@@ -176,16 +176,16 @@ else if (command === "do-what-it-says") {
 
         }
         console.log("");
-        console.log(chalk.bgRed.whiteBright("**********************************************************************************************************************************************************************************"));
+        console.log(chalk.bgMagentaBright.whiteBright("**********************************************************************************************************************************************************************************"));
         console.log("");
 
         console.log(chalk.yellowBright("Artist: " + data.tracks.items[0].artists[0].name));
-        console.log(chalk.greenBright("Song Name: " + data.tracks.items[0].name));
-        console.log(chalk.magentaBright("Preview Link: " + data.tracks.items[0].preview_url));
+        console.log(chalk.cyanBright("Song Name: " + data.tracks.items[0].name));
+        console.log(chalk.greenBright("Preview Link: " + data.tracks.items[0].preview_url));
         console.log(chalk.blueBright("Album: " + data.tracks.items[0].album.name));
 
         console.log("");
-        console.log(chalk.bgRed.whiteBright("**********************************************************************************************************************************************************************************"));
+        console.log(chalk.bgMagentaBright.whiteBright("**********************************************************************************************************************************************************************************"));
       });
 
     }
