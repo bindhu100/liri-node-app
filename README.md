@@ -33,7 +33,6 @@ If user will search the Bands in Town Artist Events API for an artist and render
 ![GitHub Logo](image/movie.jpg)
 
 
-
 ![GitHub Logo](image/Screenshot_1.jpg)
 <!-- Format: ![Alt Text](https://drive.google.com/file/d/1LdKEju-_oRYpAtqRKpJiMW9rcM5NwDCQ/view?usp=sharing) -->
 
