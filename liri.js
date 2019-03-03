@@ -2,7 +2,7 @@ require("dotenv").config();
 var Spotify = require("node-spotify-api");
 var keys = require("./keys.js");
 var spotify = new Spotify(keys.spotify);
-// 
+
 // color for chalk
 // https://www.npmjs.com/package/chalk 
 // $ npm install chalk
@@ -20,6 +20,9 @@ var moment = require("moment");
 var fs = require("fs");
 
 var command = process.argv[2];
+// ************************
+// Movie
+// ************************
 
 function movieThis(movieTitle) {
   if (movieTitle === undefined) {
@@ -64,8 +67,9 @@ function movieThis(movieTitle) {
     }
   });
 };
-
+// ************************
 // concert-this
+// ************************
 function concertThis(nameArtist) {
   request("https://rest.bandsintown.com/artists/" + nameArtist + "/events?app_id=codingbootcamp", function (error, response, data) {
     if (!error && response.statusCode === 200) {
@@ -117,7 +121,8 @@ if (command === "movie-this") {
 // **********************
 // concert
 // node liri.js concert-this <artist/band name here>
-// brand names :Alice in Chains, Alexisonfire , Animals as Leaders, Alice Cooper, 
+// brand names :Alice in Chains, Alexisonfire , Animals as Leaders, Alice Cooper
+// ************************
 else if (command === "concert-this") {
 
   var artist = process.argv[3];
@@ -127,17 +132,18 @@ else if (command === "concert-this") {
 // song
 // node liri.js spotify-this-song '<song name here>'
 // songs name: This Time for Africa, All Of Me, Happy, Sorry, Love Yourself
+// ************************
 
 else if (command === "spotify-this-song") {
   var song = process.argv[3];
 
   songThis(song);
 }
-// 8888888888888888888888
-// 88888888888888888888888
+
 // ************************
 // do-what-it-says
 // node liri.js do-what-it-says
+// ************************
 
 else if (command === "do-what-it-says") {
 
@@ -194,17 +200,21 @@ else if (command === "do-what-it-says") {
   console.log("Error!")
 }
 
+// node liri.js concert-this Alexisonfire
+// node liri.js spotify-this-song Sorry
+// node liri.js movie-this Spider Man
+// node liri.js do-what-it-says
 
-// node liri.js concert-this <artist/band name here>
+
+// node liri.js concert-this Alexisonfire <artist/band name here>
   // brand names : , Alexisonfire , Animals as Leaders, Alice Cooper, 
 // node liri.js spotify-this-song '<song name here>'
   // songs name: This Time for Africa, All Of Me, Happy, Sorry, Love Yourself
 // node liri.js movie-this '<movie name here>'
 // node liri.js do-what-it-says 
 // movie-this, spider man
-
 // spotify-this-song,"I Want it That Way"
 
-// 
+
 
 
