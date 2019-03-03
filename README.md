@@ -6,14 +6,13 @@ Link to video of Application in Action
 
 https://drive.google.com/file/d/1LdKEju-_oRYpAtqRKpJiMW9rcM5NwDCQ/view?usp=sharing
 
-<h3>Function: Concert</h3>
-if user will search the Bands in Town Artist Events API for an artist and render the following information about each event to the terminal:
+<h3><font color="red">Function for Concert</font></h3>
+If user will search the Bands in Town Artist Events API for an artist and render the following information about each event to the terminal:
 
 <ul>
 <li>Name of the venue</li>
 <li>Venue location</li>
 <li>Date of the Event</li>
-
 </ul>
 
 
