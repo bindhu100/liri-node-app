@@ -6,7 +6,7 @@ Link to video of Application in Action
 
 https://drive.google.com/file/d/1LdKEju-_oRYpAtqRKpJiMW9rcM5NwDCQ/view?usp=sharing
 
-<h3>Function for Concert[Blue]</h3>
+<h3>Function for Concert:tv:</h3>
 If user will search the Bands in Town Artist Events API for an artist and render the following information about each event to the terminal:
 
 <ul>
