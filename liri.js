@@ -21,7 +21,7 @@ var fs = require("fs");
 
 var command = process.argv[2];
 
-function movieThis(movieTitle){
+function movieThis(movieTitle) {
   if (movieTitle === undefined) {
 
     movieTitle = "Mr. Nobody";
@@ -66,7 +66,7 @@ function movieThis(movieTitle){
 };
 
 // concert-this
-function concertThis(nameArtist){
+function concertThis(nameArtist) {
   request("https://rest.bandsintown.com/artists/" + nameArtist + "/events?app_id=codingbootcamp", function (error, response, data) {
     if (!error && response.statusCode === 200) {
 
@@ -84,7 +84,7 @@ function concertThis(nameArtist){
   });
 }
 
-function songThis(song){
+function songThis(song) {
   if (song === undefined) {
     song = "The Sign";
   }
@@ -112,7 +112,7 @@ if (command === "movie-this") {
   var movie = process.argv[3];
   movieThis(movie);
 
-  }
+}
 
 // **********************
 // concert
@@ -157,13 +157,13 @@ else if (command === "do-what-it-says") {
     if (command === "concert-this") {
       var artist = doWhatItSays;
       concertThis(artist);
-   
-    }else if (command === "movie-this") {
+
+    } else if (command === "movie-this") {
       var movie = doWhatItSays;
       movieThis(movie);
 
-    }else if (command === "spotify-this-song") {
-    
+    } else if (command === "spotify-this-song") {
+
       var song = doWhatItSays;
       songThis(song);
 
@@ -189,7 +189,7 @@ else if (command === "do-what-it-says") {
 
     }
   });
-} else{
+} else {
   console.log("Error!")
 }
 
