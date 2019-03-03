@@ -200,10 +200,6 @@ else if (command === "do-what-it-says") {
   console.log("Error!")
 }
 
-// node liri.js concert-this Alexisonfire
-// node liri.js spotify-this-song Sorry
-// node liri.js movie-this Spider Man
-// node liri.js do-what-it-says
 
 
 // node liri.js concert-this Alexisonfire <artist/band name here>

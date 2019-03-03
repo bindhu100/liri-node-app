@@ -42,7 +42,7 @@ If user will search for Concert, the following information will display in termi
 
 ![GitHub Logo](image/concert.jpg)
 
-<h3>:man_cartwheeling:Do What It Says</h3>
+<h3>:man_cartwheeling:Do What It Says Function</h3>
 If user will search for Do What It Says, the following information will display in terminal/bash window
 <ul>
 <li>It should display "I Want it That Way," as follows the text in random.txt</li>
