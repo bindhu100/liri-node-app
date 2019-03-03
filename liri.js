@@ -30,7 +30,7 @@ function movieThis(movieTitle) {
   request("https://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=trilogy", function (error, response, data) {
     if (!error && response.statusCode === 200) {
       console.log(data);
-      console.log(chalk.bgCyan.whiteBright("***************************************************************"));
+      console.log(chalk.bgCyan.whiteBright("**********************************************************************************************************************************************************************************"));
       console.log("");
 
       console.log(chalk.blue("Title: " + JSON.parse(data).Title));
@@ -60,7 +60,7 @@ function movieThis(movieTitle) {
       console.log(chalk.greenBright("Actors: " + JSON.parse(data).Actors));
 
       console.log("");
-      console.log(chalk.bgCyan.whiteBright("***************************************************************"));
+      console.log(chalk.bgCyan.whiteBright("**********************************************************************************************************************************************************************************"));
     }
   });
 };
@@ -70,7 +70,7 @@ function concertThis(nameArtist) {
   request("https://rest.bandsintown.com/artists/" + nameArtist + "/events?app_id=codingbootcamp", function (error, response, data) {
     if (!error && response.statusCode === 200) {
 
-      console.log(chalk.bgRed.whiteBright("***************************************************************"));
+      console.log(chalk.bgRed.whiteBright("**********************************************************************************************************************************************************************************"));
       console.log("");
 
       console.log(chalk.yellow("Venue: " + JSON.parse(data)[0].venue.name));
@@ -78,7 +78,7 @@ function concertThis(nameArtist) {
       console.log(chalk.blue("Date: " + moment(JSON.parse(data)[0].datetime).format("MM/DD/YYYY")));
 
       console.log("");
-      console.log(chalk.bgRed.whiteBright("***************************************************************"));
+      console.log(chalk.bgRed.whiteBright("**********************************************************************************************************************************************************************************"));
     }
 
   });
@@ -93,7 +93,7 @@ function songThis(song) {
       return console.log('Error occurred: ' + err);
 
     }
-    console.log(chalk.bgGreenBright.whiteBright("***************************************************************"));
+    console.log(chalk.bgGreenBright.whiteBright("**********************************************************************************************************************************************************************************"));
     console.log("");
 
     console.log(chalk.blueBright("Artist: " + data.tracks.items[0].artists[0].name));
@@ -102,7 +102,7 @@ function songThis(song) {
     console.log(chalk.magentaBright("Album: " + data.tracks.items[0].album.name));
 
     console.log("");
-    console.log(chalk.bgGreenBright.whiteBright("***************************************************************"));
+    console.log(chalk.bgGreenBright.whiteBright("**********************************************************************************************************************************************************************************"));
   });
 }
 
@@ -175,16 +175,17 @@ else if (command === "do-what-it-says") {
           return console.log('Error occurred: ' + err);
 
         }
-        console.log(chalk.bgRed.whiteBright("***************************************************************"));
+        console.log("");
+        console.log(chalk.bgRed.whiteBright("**********************************************************************************************************************************************************************************"));
         console.log("");
 
-        console.log("Artist: " + data.tracks.items[0].artists[0].name);
-        console.log("Song Name: " + data.tracks.items[0].name);
-        console.log("Preview Link: " + data.tracks.items[0].preview_url);
-        console.log("Album: " + data.tracks.items[0].album.name);
+        console.log(chalk.yellowBright("Artist: " + data.tracks.items[0].artists[0].name));
+        console.log(chalk.greenBright("Song Name: " + data.tracks.items[0].name));
+        console.log(chalk.magentaBright("Preview Link: " + data.tracks.items[0].preview_url));
+        console.log(chalk.blueBright("Album: " + data.tracks.items[0].album.name));
 
         console.log("");
-        console.log(chalk.bgRed.whiteBright("***************************************************************"));
+        console.log(chalk.bgRed.whiteBright("**********************************************************************************************************************************************************************************"));
       });
 
     }
@@ -204,6 +205,6 @@ else if (command === "do-what-it-says") {
 
 // spotify-this-song,"I Want it That Way"
 
-
+// 
 
 
