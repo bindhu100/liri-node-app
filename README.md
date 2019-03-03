@@ -7,8 +7,20 @@ Link to video of Application in Action
 https://drive.google.com/file/d/1LdKEju-_oRYpAtqRKpJiMW9rcM5NwDCQ/view?usp=sharing
 
 
+<h3>:musical_score:Song Function</h3>
+If user will search for Song, the following information will display in terminal/bash window
+<ul>
+<li>Artist(s)</li>
+<li>The song's name</li>
+<li>A preview link of the song from Spotify</li>
+<li>The album that the song is from</li>
+</ul>
+
+![GitHub Logo](image/song.jpg)
+
+
 <h3>:film_strip:Movie Function</h3>
-If user will search for movie, the following information will display in your terminal/bash window
+If user will search for Movie, the following information will display in terminal/bash window
 <ul>
 <li>Title of the movie</li>
 <li>Year the movie came out</li>
@@ -22,41 +34,31 @@ If user will search for movie, the following information will display in your te
 
 ![GitHub Logo](image/movie.jpg)
 
-<h3>:musical_score:Song Function</h3>
-If user will search for song, the following information will display in your terminal/bash window
-<ul>
-<li>Artist(s)</li>
-<li>The song's name</li>
-<li>A preview link of the song from Spotify</li>
-<li>The album that the song is from</li>
-</ul>
-
-![GitHub Logo](image/song.jpg)
 
 
-
-
-
-
-
-
-
-
-<h3>Function for Concert:tv:</h3>
-If user will search the Bands in Town Artist Events API for an artist and render the following information about each event to the terminal:
-
+<h3>:loud_sound:Concert Function</h3>
+If user will search for Concert, the following information will display in terminal/bash window
 <ul>
 <li>Name of the venue</li>
 <li>Venue location</li>
 <li>Date of the Event</li>
 </ul>
 
+![GitHub Logo](image/concert.jpg)
+
+<h3>:man_cartwheeling:Do What It Says</h3>
+If user will search for Do What It Says, the following information will display in terminal/bash window
+<ul>
+<li>It should display "I Want it That Way," as follows the text in random.txt</li>
+</ul>
+
+![GitHub Logo](image/doWhatItSays.jpg)
 
 
 
 
-![GitHub Logo](image/Screenshot_1.jpg)
-<!-- Format: ![Alt Text](https://drive.google.com/file/d/1LdKEju-_oRYpAtqRKpJiMW9rcM5NwDCQ/view?usp=sharing) -->
+
+
 
 
 

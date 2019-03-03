@@ -196,7 +196,7 @@ else if (command === "do-what-it-says") {
 
 
 // node liri.js concert-this <artist/band name here>
-  // brand names :Alice in Chains, Alexisonfire , Animals as Leaders, Alice Cooper, 
+  // brand names : , Alexisonfire , Animals as Leaders, Alice Cooper, 
 // node liri.js spotify-this-song '<song name here>'
   // songs name: This Time for Africa, All Of Me, Happy, Sorry, Love Yourself
 // node liri.js movie-this '<movie name here>'
