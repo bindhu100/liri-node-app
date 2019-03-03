@@ -8,7 +8,7 @@ https://drive.google.com/file/d/1LdKEju-_oRYpAtqRKpJiMW9rcM5NwDCQ/view?usp=shari
 
 
 <h3>:film_strip:Movie Function</h3>
-If user will search the movie the following information display in your terminal/bash window
+If user will search for movie, the following information will display in your terminal/bash window
 <ul>
 <li>Title of the movie</li>
 <li>Year the movie came out</li>
@@ -21,6 +21,26 @@ If user will search the movie the following information display in your terminal
 </ul>
 
 ![GitHub Logo](image/movie.jpg)
+
+<h3>:musical_score:Song Function</h3>
+If user will search for song, the following information will display in your terminal/bash window
+<ul>
+<li>Artist(s)</li>
+<li>The song's name</li>
+<li>A preview link of the song from Spotify</li>
+<li>The album that the song is from</li>
+</ul>
+
+![GitHub Logo](image/song.jpg)
+
+
+
+
+
+
+
+
+
 
 <h3>Function for Concert:tv:</h3>
 If user will search the Bands in Town Artist Events API for an artist and render the following information about each event to the terminal:
