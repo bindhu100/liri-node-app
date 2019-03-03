@@ -2,8 +2,17 @@
 <h3>Overview</h3> 
 LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
 
+<h3>This app can take in one of the following commands:</h3>
+<ul>
+<li>spotify-this-song</li>
+<li>movie-this</li>
+<li>concert-this</li>
+<li>do-what-it-says</li>
+</ul>
 
-<h3>:musical_score:Song Function</h3>
+<h3>What Each Command Should Do</h3>
+
+<h3>:musical_score:Song Function node liri.js concert-this &lt;artist/band name here&gt;</h3>
 If user will search for Song, the following information will display in terminal/bash window
 <ul>
 <li>Artist(s)</li>
