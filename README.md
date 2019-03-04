@@ -40,7 +40,7 @@ If user will search for Movie, the following information will display in termina
 <li>Actors in the movie</li>
 </ul>
 
-![GitHub Logo](image/movie.jpg)
+![GitHub Logo](image/movies.jpg)
 
 
 
