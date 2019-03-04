@@ -23,7 +23,7 @@ If user will search for Song, the following information will display in terminal
 <li>The album that the song is from</li>
 </ul>
 
-![GitHub Logo](image/song.jpg)
+![GitHub Logo](image/songs.jpg)
 
 
 <h3>:film_strip:Movie Function</h3>
