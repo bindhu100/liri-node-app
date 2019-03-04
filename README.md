@@ -27,7 +27,7 @@ If user will search for Song, the following information will display in terminal
 
 
 <h3>:film_strip:Movie Function</h3>
-<h6>Command: node liri.js movie-this  &lt;movie name here&gt;</h6>
+<h6>**Command:** node liri.js movie-this  &lt;movie name here&gt;</h6>
 If user will search for Movie, the following information will display in terminal/bash window
 <ul>
 <li>Title of the movie</li>
