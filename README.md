@@ -13,7 +13,7 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 
 <h3>:musical_score:Song Function</h3>
-<h6>Command: node liri.js spotify-this-song &lt;song name here&gt;</h6>
+<p><h5>Command:</h5><h6> node liri.js spotify-this-song &lt;song name here&gt;</h6></p>
 If user will search for Song, the following information will display in terminal/bash window
 
 <ul>
@@ -27,7 +27,7 @@ If user will search for Song, the following information will display in terminal
 
 
 <h3>:film_strip:Movie Function</h3>
-<h6>**Command:** node liri.js movie-this  &lt;movie name here&gt;</h6>
+<h6>Command: node liri.js movie-this  &lt;movie name here&gt;</h6>
 If user will search for Movie, the following information will display in terminal/bash window
 <ul>
 <li>Title of the movie</li>
