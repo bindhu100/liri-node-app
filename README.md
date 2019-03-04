@@ -14,7 +14,7 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 <h3>:musical_score:Song Function</h3>
 If user will search for Song, the following information will display in terminal/bash window
-<h6>Command:</h6> node liri.js concert-this &lt;artist/band name here&gt;
+<h6>Command: node liri.js concert-this &lt;artist/band name here&gt;</h6>
 <ul>
 <li>Artist(s)</li>
 <li>The song's name</li>
